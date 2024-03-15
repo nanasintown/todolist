@@ -33,7 +33,7 @@ struct AddView: View {
                         .font(.headline)
                         .frame(height: 55)
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                        .background(Color.blue)
+                        .background(.color)
                         .cornerRadius(12)
                 })
             }
@@ -49,7 +49,6 @@ struct AddView: View {
             if isPresented {
                 dismiss()
             }
-//            presentationMode.wrappedValue.dismiss()
         }
     }
     
@@ -69,7 +68,7 @@ struct AddView: View {
     }
     
 #Preview {
-    NavigationView{
+    NavigationStack{
         AddView()
     }
     .environmentObject(ListViewModel())

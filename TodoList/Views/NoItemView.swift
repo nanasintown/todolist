@@ -22,7 +22,7 @@ struct NoItemView: View {
                     label: {
                     Text("Create task")
                             .font(.headline)
-                            .foregroundColor(Color.blue)
+                            .foregroundColor(Color.white)
                             .frame(height: 50)
                             .frame(maxWidth: .infinity)
                             .background(animate ? Color.color : Color.color1)
@@ -30,7 +30,7 @@ struct NoItemView: View {
                 })
                 .padding(.horizontal, animate ? 50 : 55)
                 .shadow(
-                    color: animate ? Color.green.opacity(0.5) : Color.red.opacity(0.4),
+                    color: animate ? Color.green.opacity(0.3) : Color.green.opacity(0.4),
                     radius: animate ? 10 : 7)
             }
             .multilineTextAlignment(.center)
@@ -54,7 +54,7 @@ struct NoItemView: View {
 }
 
 #Preview {
-    NavigationView{
+    NavigationStack{
         NoItemView()
             .navigationTitle("Something")
     }

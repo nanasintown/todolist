@@ -37,14 +37,19 @@ struct ListView: View {
             }
         }
         .navigationTitle("To Do List")
-        .navigationBarItems(leading: EditButton(),
-                            trailing: NavigationLink("Add", destination: AddView()))
+        .toolbar{
+            ToolbarItem(placement: .navigationBarLeading) {
+                EditButton()
+            }
+            ToolbarItem(placement: .navigationBarTrailing){
+                NavigationLink("Add", destination: AddView())            }
+        }
     }
 
 }
 
 #Preview {
-    NavigationView{
+    NavigationStack{
         ListView()
     }
     .environmentObject(ListViewModel())
