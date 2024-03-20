@@ -2,8 +2,6 @@
 //  ListRowView.swift
 //  TodoList
 //
-//  Created by mac on 9.3.2024.
-//
 
 import SwiftUI
 
